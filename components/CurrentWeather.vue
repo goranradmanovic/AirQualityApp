@@ -103,7 +103,6 @@ export default {
 
   methods: {
     setWeatherData (data) {
-      console.log(data)
       this.weatherData = data.data
     },
 
