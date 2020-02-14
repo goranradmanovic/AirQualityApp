@@ -35,6 +35,10 @@
           h2.mt-4.mb-4.headline.text-uppercase.text-center What am I breathing right now?
 
           PollutionsTable
+
+      v-row
+        v-col.mt-5(xs='12' sm='12' md='12' lg='12')
+          Footer
 </template>
 
 <script>
@@ -42,6 +46,7 @@ import AirQuality from '~/components/AirQuality.vue'
 import CurrentWeather from '~/components/CurrentWeather.vue'
 import HealthRecommendationstable from '~/components/HealthRecommendationsTable.vue'
 import PollutionsTable from '~/components/PollutionsTable.vue'
+import Footer from '~/components/Footer.vue'
 import axios from 'axios'
 
 export default {
@@ -49,7 +54,8 @@ export default {
     AirQuality,
     CurrentWeather,
     HealthRecommendationstable,
-    PollutionsTable
+    PollutionsTable,
+    Footer
   },
 
   data () {
