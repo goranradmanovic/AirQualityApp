@@ -13,7 +13,22 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { 'http-equiv': 'Content-Type', content: 'text/html; charset=ISO-8859-1'},
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge'},
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { name: 'keywords', content: 'Air, Quality, App, Application, Ecology, Green' },
+      { property: 'og:url', content: 'https://cocky-jones-a58ae7.netlify.com/' },
+      { property: 'og:image:width', content: '776' },
+      { property: 'og:image:height', content: '616' },
+      { property: 'og:image:secure_url', content: '/meta/air-thumbnail.jpg' },
+      { property: 'og:image', content: '/meta/air-thumbnail.jpg' },
+      { property: 'og:image:alt', content: 'Social thumbnail image' },
+      { name: 'twitter:title', content: 'Air Quality App'},
+      { name: 'twitter:description', content: process.env.npm_package_description || '' },
+      { name: 'twitter:image', content: '/meta/air-thumbnail.jpg' },
+      { name: 'twitter:image:alt', content: 'Social thumbnail image' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { rel: 'canonical', href: 'https://cocky-jones-a58ae7.netlify.com/' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
