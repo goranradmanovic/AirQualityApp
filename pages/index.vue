@@ -1,5 +1,8 @@
 <template lang="pug">
     v-container(fluid)
+      v-overlay(:value='loading')
+        v-progress-circular(indeterminate size='64')
+
       v-row(id='air-weather')
         v-col(xs='12' sm='12' md='8' offset-md="2" lg='8' offset-lg='2')
           v-card.air-weather__card.mx-auto(max-width='400')
@@ -64,7 +67,8 @@ export default {
         'Air Quality', 'Current Weather'
       ],
       tab: null,
-      airQualityColorHex: null
+      airQualityColorHex: null,
+      loading: false
     }
   },
 
@@ -80,14 +84,23 @@ export default {
     store.commit('setWeatherData', weatherData)
   },
 
+  created () {
+    this.setLoader(true)
+  },
+
   mounted () {
     this.setAirQualityColorHex()
+    this.setLoader(false)
   },
 
   methods: {
     setAirQualityColorHex () {
       const airData = this.$store.getters.getAirData
       this.airQualityColorHex = airData.data.data.indexes.baqi.color
+    },
+
+    setLoader (param) {
+      this.loading = param
     }
   }
 }
