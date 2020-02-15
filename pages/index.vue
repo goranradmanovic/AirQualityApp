@@ -1,6 +1,6 @@
 <template lang="pug">
     v-container(fluid)
-      v-overlay(:value='loading')
+      v-overlay(:value='loading' opacity='0.9')
         v-progress-circular(indeterminate size='64')
 
       v-row(id='air-weather')
