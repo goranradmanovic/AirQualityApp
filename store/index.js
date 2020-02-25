@@ -1,7 +1,8 @@
 export const state = () => ({
 
   airData: null,
-  weatherData: null
+  weatherData: null,
+  loader: true
 })
 
 export const mutations = {
@@ -12,6 +13,10 @@ export const mutations = {
 
   setWeatherData (state, weatherData) {
     state.weatherData = weatherData
+  },
+
+  setLoader (state, data) {
+    state.loader = data
   }
 }
 
@@ -25,5 +30,9 @@ export const getters = {
 
   getWeatherData (state) {
     return state.weatherData
+  },
+
+  getLoader (state) {
+    return state.loader
   }
 }
