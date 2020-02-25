@@ -1,8 +1,5 @@
 <template lang="pug">
     v-container(fluid)
-      v-overlay(:value='loading' opacity='0.9')
-        v-progress-circular(indeterminate size='64')
-
       v-row(id='air-weather')
         v-col(xs='12' sm='12' md='8' offset-md="2" lg='8' offset-lg='2')
           v-card.air-weather__card.mx-auto(max-width='400')
@@ -67,8 +64,7 @@ export default {
         'Air Quality', 'Current Weather'
       ],
       tab: null,
-      airQualityColorHex: null,
-      loading: false
+      airQualityColorHex: null
     }
   },
 
@@ -82,25 +78,18 @@ export default {
     const weatherAPIUrl = 'https://api.breezometer.com/v1/weather/currentconditions?lat=45.13333&lon=17.25&key=b7401295888443538a7ebe04719c8394&hours=72'
     const weatherData = await axios.get(weatherAPIUrl)
     store.commit('setWeatherData', weatherData)
-  },
 
-  created () {
-    this.setLoader(true)
+    // store.commit('setLoader', false)
   },
 
   mounted () {
     this.setAirQualityColorHex()
-    this.setLoader(false)
   },
 
   methods: {
     setAirQualityColorHex () {
       const airData = this.$store.getters.getAirData
       this.airQualityColorHex = airData.data.data.indexes.baqi.color
-    },
-
-    setLoader (param) {
-      this.loading = param
     }
   }
 }
