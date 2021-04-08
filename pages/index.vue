@@ -71,13 +71,13 @@ export default {
   async fetch ({ store, params }) {
     // Air API
     // const airAPIUrl = 'https://api.breezometer.com/air-quality/v2/current-conditions?key=19fe4c1b5d2e49fdb8e555ef5c1700aa&metadata=true&features=breezometer_aqi,local_aqi,health_recommendations,sources_and_effects,dominant_pollutant_concentrations,pollutants_concentrations,all_pollutants_concentrations,pollutants_aqi_information&lat=45.13333&lon=17.25'
-    const airAPIUrl = 'https://api.breezometer.com/air-quality/v2/current-conditions?key=8f409b466bee4f709b8221b91d994133&metadata=true&features=breezometer_aqi,local_aqi,health_recommendations,sources_and_effects,dominant_pollutant_concentrations,pollutants_concentrations,all_pollutants_concentrations,pollutants_aqi_information&lat=45.13333&lon=17.25'
+    const airAPIUrl = 'https://raw.githubusercontent.com/goranradmanovic/AirQualityApp/master/api/airquality.json'
     const airData = await axios.get(airAPIUrl)
     store.commit('setAirData', airData)
 
     // Weather API
     // const weatherAPIUrl = 'https://api.breezometer.com/v1/weather/currentconditions?lat=45.13333&lon=17.25&key=19fe4c1b5d2e49fdb8e555ef5c1700aa&hours=72'
-    const weatherAPIUrl = 'https://api.breezometer.com/v1/weather/currentconditions?lat=45.13333&lon=17.25&key=8f409b466bee4f709b8221b91d994133&hours=72'
+    const weatherAPIUrl = 'https://raw.githubusercontent.com/goranradmanovic/AirQualityApp/master/api/weather.json'
     const weatherData = await axios.get(weatherAPIUrl)
     store.commit('setWeatherData', weatherData)
 
