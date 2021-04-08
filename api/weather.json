@@ -1,0 +1,46 @@
+{
+"datetime": "2021-04-08T10:00:00Z",
+"is_day_time": true,
+"icon_code": 1,
+"weather_text": "Clear, cloudless sky",
+"temperature": {
+"value": 10.17,
+"unit": "C"
+},
+"feels_like_temperature": {
+"value": 6.61,
+"unit": "C"
+},
+"relative_humidity": 42,
+"precipitation": {
+"precipitation_probability": 0,
+"total_precipitation": {
+"value": 0,
+"unit": "mm"
+}
+},
+"wind": {
+"speed": {
+"value": 9.756,
+"unit": "km/h"
+},
+"direction": 299
+},
+"wind_gust": {
+"value": 21.024,
+"unit": "km/h"
+},
+"pressure": {
+"value": 1013.39,
+"unit": "mb"
+},
+"visibility": {
+"value": 45,
+"unit": "km"
+},
+"dew_point": {
+"value": -2.08,
+"unit": "C"
+},
+"cloud_cover": 0
+}
